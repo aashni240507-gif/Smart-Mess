@@ -1,0 +1,17 @@
+# Oracle Database Connection Configuration Example
+# Copy this file to db.properties and update with your local credentials.
+#
+# Common JDBC URL formats for Oracle:
+#   Oracle 21c XE / 23ai Free (Service Name):
+#     db.url=jdbc:oracle:thin:@//localhost:1521/XEPDB1
+#
+#   Oracle 11g XE / 18c XE (SID):
+#     db.url=jdbc:oracle:thin:@localhost:1521:xe
+#
+#   Oracle Enterprise (Service Name):
+#     db.url=jdbc:oracle:thin:@//localhost:1521/ORCLPDB1
+
+db.url=jdbc:oracle:thin:@//localhost:1521/XEPDB1
+db.username=smartmess
+db.password=smartmess123
+db.driver=oracle.jdbc.OracleDriver

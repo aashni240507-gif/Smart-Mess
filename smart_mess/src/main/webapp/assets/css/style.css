@@ -1,0 +1,368 @@
+/* ==========================================================================
+   SmartMess - College Mess Food Management System Styling
+   Theme: Professional Dark Navy Sidebar, Light Crisp Body, Emerald Accents
+   ========================================================================== */
+
+:root {
+    --navy-dark: #0f172a;
+    --navy-sidebar: #1e293b;
+    --navy-hover: #334155;
+    --navy-light: #475569;
+    --emerald-primary: #10b981;
+    --emerald-hover: #059669;
+    --emerald-light: #d1fae5;
+    --bg-light: #f8fafc;
+    --card-bg: #ffffff;
+    --text-primary: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   App Layout with Navy Sidebar
+   -------------------------------------------------------------------------- */
+.app-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: var(--navy-sidebar);
+    color: #f1f5f9;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.sidebar-header {
+    padding: 1.5rem 1.25rem;
+    background-color: var(--navy-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.sidebar-brand .brand-icon {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 1rem 0.75rem;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar-nav .nav-item {
+    margin-bottom: 0.35rem;
+}
+
+.sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.7rem 1rem;
+    color: #cbd5e1;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.sidebar-nav .nav-link:hover {
+    background-color: var(--navy-hover);
+    color: #ffffff;
+}
+
+.sidebar-nav .nav-link.active {
+    background-color: var(--emerald-primary);
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.sidebar-footer {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: rgba(15, 23, 42, 0.4);
+}
+
+.user-profile-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--emerald-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Main Content Area
+   -------------------------------------------------------------------------- */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.top-navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.85rem 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-body {
+    padding: 1.75rem;
+    flex-grow: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Metric Cards & Widgets
+   -------------------------------------------------------------------------- */
+.metric-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.metric-card.accent-green { border-left: 4px solid var(--emerald-primary); }
+.metric-card.accent-blue { border-left: 4px solid #3b82f6; }
+.metric-card.accent-amber { border-left: 4px solid #f59e0b; }
+.metric-card.accent-rose { border-left: 4px solid #f43f5e; }
+.metric-card.accent-purple { border-left: 4px solid #8b5cf6; }
+
+.metric-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.metric-value {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+    margin: 0;
+}
+
+.metric-subtitle {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Custom Buttons (Green Primary Accent)
+   -------------------------------------------------------------------------- */
+.btn-primary {
+    background-color: var(--emerald-primary);
+    border-color: var(--emerald-primary);
+    font-weight: 600;
+    padding: 0.55rem 1.2rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--emerald-hover);
+    border-color: var(--emerald-hover);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-outline-primary {
+    color: var(--emerald-primary);
+    border-color: var(--emerald-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--emerald-primary);
+    border-color: var(--emerald-primary);
+    color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   Tables and Badges
+   -------------------------------------------------------------------------- */
+.table-custom {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.table-custom th {
+    background-color: #f8fafc;
+    color: #475569;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table-custom td {
+    padding: 0.85rem 1rem;
+    vertical-align: middle;
+    font-size: 0.92rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table-custom tr:hover td {
+    background-color: #f1f5f9;
+}
+
+.badge-pending {
+    background-color: #fef3c7;
+    color: #b45309;
+    font-weight: 600;
+    padding: 0.35rem 0.65rem;
+    border-radius: 6px;
+}
+
+.badge-in-progress {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-weight: 600;
+    padding: 0.35rem 0.65rem;
+    border-radius: 6px;
+}
+
+.badge-resolved {
+    background-color: #d1fae5;
+    color: #065f46;
+    font-weight: 600;
+    padding: 0.35rem 0.65rem;
+    border-radius: 6px;
+}
+
+.badge-present {
+    background-color: #dcfce7;
+    color: #15803d;
+    font-weight: 600;
+    padding: 0.35rem 0.65rem;
+    border-radius: 6px;
+}
+
+.badge-absent {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    font-weight: 600;
+    padding: 0.35rem 0.65rem;
+    border-radius: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   Menu Meal Card
+   -------------------------------------------------------------------------- */
+.meal-card {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.meal-card-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meal-card-body {
+    padding: 1.25rem;
+    flex-grow: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Star Rating Stars
+   -------------------------------------------------------------------------- */
+.star-rating {
+    font-size: 1.5rem;
+    color: #cbd5e1;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 0.2rem;
+}
+
+.star-rating .star {
+    transition: color 0.15s ease;
+}
+
+.star-rating .star.selected,
+.star-rating .star.hovered {
+    color: #f59e0b;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Design
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        bottom: 0;
+        z-index: 1050;
+    }
+    .sidebar.show {
+        left: 0;
+    }
+}
