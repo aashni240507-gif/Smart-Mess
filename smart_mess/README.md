@@ -1,4 +1,4 @@
-# SmartMess — Smart College Mess Food Management System
+### SmartMess — Smart College Mess Food Management System
 ### A Complete Java Servlets + Oracle DBMS Academic Project
 SmartMess is a production-grade, college-level web application designed to digitize daily mess operations, meal attendance forecasting, student food feedback, grievance handling, and kitchen food wastage tracking.
 Built with **Java 17/21, Jakarta Servlets & JSP, JDBC, Apache Tomcat 10.1, and Oracle Database 21c XE**.
