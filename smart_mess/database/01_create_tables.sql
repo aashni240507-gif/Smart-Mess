@@ -11,7 +11,7 @@ SET FEEDBACK ON;
 
 PROMPT ============================================================================
 PROMPT Starting SmartMess Table Creation Script...
-PROMPT ============================================================================
+PROMPT ===============================================================================
 
 -- Safe cleanup: drop tables in reverse dependency order if they exist
 BEGIN
